@@ -1,0 +1,96 @@
+<Window x:Class="Connect4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Connect4"
+        mc:Ignorable="d"
+        Title="Connect Four" Height="611" Width="583" ResizeMode="CanMinimize">
+    
+    <Grid Margin="10,10,4,1" Name="TokenGrid">
+    
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="60*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        
+        <Image Height="69" VerticalAlignment="Top" HorizontalAlignment="Left" Width="69" Name="i00"/>
+        <Image Grid.Column="1" Height="69" VerticalAlignment="Top" HorizontalAlignment="Left" Width="69" Name="i01"/>
+        <Image Grid.Column="2" Height="69" VerticalAlignment="Top" HorizontalAlignment="Left" Width="69" Name="i02"/>
+        <Image Grid.Column="3" HorizontalAlignment="Left" Width="69" Height="69" VerticalAlignment="Top" Name="i03"/>
+        <Image Grid.Column="4" Height="69" VerticalAlignment="Top" HorizontalAlignment="Left" Width="69" Name="i04"/>
+        <Image Grid.Column="5" Height="69" VerticalAlignment="Top" HorizontalAlignment="Left" Width="68" Name="i05"/>
+        <Image Grid.Column="6" Height="69" VerticalAlignment="Top" HorizontalAlignment="Left" Width="69" Name="i06"/>
+        <Image HorizontalAlignment="Left" Grid.Row="1" Width="69" Height="69" VerticalAlignment="Top" Name="i10"/>
+        <Image HorizontalAlignment="Left" Grid.Row="1" Grid.Column="1" Width="69" Height="69" VerticalAlignment="Top" Name="i11"/>
+        <Image HorizontalAlignment="Left" Grid.Row="1" Grid.Column="2" Width="69" Height="69" VerticalAlignment="Top" Name="i12"/>
+        <Image HorizontalAlignment="Left" Grid.Row="1" Grid.Column="3" Width="69" Height="69" VerticalAlignment="Top" Name="i13"/>
+        <Image HorizontalAlignment="Left" Grid.Row="1" Grid.Column="4" Width="69" Height="69" VerticalAlignment="Top" Name="i14"/>
+        <Image HorizontalAlignment="Left" Grid.Row="1" Grid.Column="5" Width="69" Height="69" VerticalAlignment="Top" Name="i15"/>
+        <Image HorizontalAlignment="Left" Grid.Row="1" Grid.Column="6" Width="69" Height="69" VerticalAlignment="Top" Name="i16"/>
+        <Image HorizontalAlignment="Left" Grid.Row="2" Width="69" Height="69" VerticalAlignment="Top" Name="i20"/>
+        <Image HorizontalAlignment="Left" Grid.Row="2" Grid.Column="1" Width="69" Height="69" VerticalAlignment="Top" Name="i21"/>
+        <Image HorizontalAlignment="Left" Grid.Row="2" Grid.Column="2" Width="69" Height="69" VerticalAlignment="Top" Name="i22"/>
+        <Image HorizontalAlignment="Left" Grid.Row="2" Grid.Column="3" Width="69" Height="69" VerticalAlignment="Top" Name="i23"/>
+        <Image HorizontalAlignment="Left" Grid.Row="2" Grid.Column="4" Width="69" Height="69" VerticalAlignment="Top" Name="i24"/>
+        <Image HorizontalAlignment="Left" Grid.Row="2" Grid.Column="5" Width="69" Height="69" VerticalAlignment="Top" Name="i25"/>
+        <Image HorizontalAlignment="Left" Grid.Row="2" Grid.Column="6" Width="69" Height="69" VerticalAlignment="Top" Name="i26"/>
+        <Image HorizontalAlignment="Left" Grid.Row="3" Width="69" Height="69" VerticalAlignment="Top" Name="i30"/>
+        <Image HorizontalAlignment="Left" Grid.Row="3" Grid.Column="1" Width="69" Height="69" VerticalAlignment="Top" Name="i31"/>
+        <Image HorizontalAlignment="Left" Grid.Row="3" Grid.Column="2" Width="69" Height="69" VerticalAlignment="Top" Name="i32"/>
+        <Image HorizontalAlignment="Left" Grid.Row="3" Grid.Column="3" Width="69" Height="69" VerticalAlignment="Top" Name="i33"/>
+        <Image HorizontalAlignment="Left" Grid.Row="3" Grid.Column="4" Width="69" Height="69" VerticalAlignment="Top" Name="i34"/>
+        <Image HorizontalAlignment="Left" Grid.Row="3" Grid.Column="5" Width="69" Height="69" VerticalAlignment="Top" Name="i35"/>
+        <Image HorizontalAlignment="Left" Grid.Row="3" Grid.Column="6" Width="69" Height="69" VerticalAlignment="Top" Name="i36"/>
+        <Image HorizontalAlignment="Left" Grid.Row="4" Width="69" Height="69" VerticalAlignment="Top" Name="i40"/>
+        <Image HorizontalAlignment="Left" Grid.Row="4" Grid.Column="1" Width="69" Height="69" VerticalAlignment="Top" Name="i41"/>
+        <Image HorizontalAlignment="Left" Grid.Row="4" Grid.Column="2" Width="69" Height="69" VerticalAlignment="Top" Name="i42"/>
+        <Image HorizontalAlignment="Left" Grid.Row="4" Grid.Column="3" Width="69" Height="69" VerticalAlignment="Top" Name="i43"/>
+        <Image HorizontalAlignment="Left" Grid.Row="4" Grid.Column="4" Width="69" Height="69" VerticalAlignment="Top" Name="i44"/>
+        <Image HorizontalAlignment="Left" Grid.Row="4" Grid.Column="5" Width="69" Height="69" VerticalAlignment="Top" Name="i45"/>
+        <Image HorizontalAlignment="Left" Grid.Row="4" Grid.Column="6" Width="69" Height="69" VerticalAlignment="Top" Name="i46"/>
+        <Image HorizontalAlignment="Left" Grid.Row="5" Width="69" Height="69" VerticalAlignment="Top" Name="i50"/>
+        <Image HorizontalAlignment="Left" Grid.Row="5" Grid.Column="1" Width="69" Height="69" VerticalAlignment="Top" Name="i51"/>
+        <Image HorizontalAlignment="Left" Grid.Row="5" Grid.Column="2" Width="69" Height="69" VerticalAlignment="Top" Name="i52"/>
+        <Image HorizontalAlignment="Left" Grid.Row="5" Grid.Column="3" Width="69" Height="69" VerticalAlignment="Top" Name="i53"/>
+        <Image HorizontalAlignment="Left" Grid.Row="5" Grid.Column="4" Width="69" Height="69" VerticalAlignment="Top" Name="i54"/>
+        <Image HorizontalAlignment="Left" Grid.Row="5" Grid.Column="5" Width="69" Height="69" VerticalAlignment="Top" Name="i55"/>
+        <Image HorizontalAlignment="Left" Grid.Row="5" Grid.Column="6" Width="69" Height="69" VerticalAlignment="Top" Name="i56"/>
+        
+        <Button Content="" Margin="0,9,0,0" Grid.Row="6" Grid.RowSpan="2" Name="b0" Click="b0_Click" HorizontalAlignment="Left" Width="69" IsCancel="True" IsEnabled="False"/>
+        <Button Content="" Margin="0,9,0,0" Grid.Row="6" Grid.RowSpan="2" Grid.Column="1" Name="b1" Click="b1_Click" HorizontalAlignment="Left" Width="69" IsEnabled="False"/>
+        <Button Content="" Margin="0,9,0,0" Grid.Row="6" Grid.RowSpan="2" Grid.Column="2" Name="b2" Click="b2_Click" HorizontalAlignment="Left" Width="69" IsEnabled="False"/>
+        <Button Content="" Margin="0,9,0,0" Grid.Row="6" Grid.RowSpan="2" Grid.Column="3" Name="b3" Click="b3_Click" HorizontalAlignment="Left" Width="69" IsEnabled="False"/>
+        <Button Content="" Margin="0,9,0,0" Grid.Row="6" Grid.RowSpan="2" Grid.Column="4" Name="b4" Click="b4_Click" HorizontalAlignment="Left" Width="69" IsEnabled="False"/>
+        <Button Content="" Margin="0,9,0,0" Grid.Row="6" Grid.RowSpan="2" Grid.Column="5" Name="b5" Click="b5_Click" HorizontalAlignment="Left" Width="69" IsEnabled="False"/>
+        <Button Content="" Margin="0,9,0,0" Grid.Row="6" Grid.RowSpan="2" Grid.Column="6" Name="b6" Click="b6_Click" HorizontalAlignment="Left" Width="69" IsEnabled="False"/>
+        
+        <TextBlock x:Name="Player_Textblock" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="22" Grid.Row="9" TextWrapping="Wrap" Text="Current Player: Player 1" VerticalAlignment="Top" Width="241" FontFamily="Consolas" FontWeight="Bold" FontSize="14"/>
+        <Button x:Name="MultiP_Button" Content="New Multiplayer Game" HorizontalAlignment="Left" VerticalAlignment="Top" Width="149" Grid.Column="5" Margin="0,10,0,0" Grid.Row="9" Grid.ColumnSpan="2" Height="29" Click="MultiP_Button_Click"/>
+        <Button x:Name="SingleP_Button" Content="New Singleplayer Game" HorizontalAlignment="Left" VerticalAlignment="Top" Width="149" Grid.Column="3" Margin="0,10,0,0" Grid.Row="9" Grid.ColumnSpan="2" Height="29" Click="SingleP_Button_Click"/>
+        <ComboBox x:Name="Difficulty_Box" Grid.ColumnSpan="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="187" Margin="0,22,0,0" Grid.Row="9">
+            <ComboBoxItem>Easy CPU</ComboBoxItem>
+            <ComboBoxItem IsSelected="True">Normal CPU</ComboBoxItem>
+            <ComboBoxItem>Hard CPU</ComboBoxItem>
+        </ComboBox>
+
+    </Grid>
+
+</Window>
